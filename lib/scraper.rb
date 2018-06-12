@@ -23,14 +23,17 @@ class Scraper
     students
   end
 
+#twitter url, linkedin url, github url, blog url, profile quote, and bio.
   def self.scrape_profile_page(profile_url)
-    # html = open(profile_url)
-    # profile_page = Nokogiri::HTML(html)
-    #
-    # student = {}
-    #
-    # links = profile_page.css("social-icon-container").each do ||
 
+    html = open(profile_url)
+    profile_page = Nokogiri::HTML(html)
+
+    student = {}
+
+    links = profile_page.css(".social-icon-container")
+    end
+    binding.pry
   end
 
 end
