@@ -31,8 +31,9 @@ class Student
   #The return value of this method should be the student itself. Use the self keyword.
 
   def add_student_attributes(attributes_hash)
-    attributes_hash.each {|attribute, value|
-    self.send ("#{attribute}=", value)}
+    attributes_hash.each do |attribute, value|
+      self.send ("#{attribute}=", value)
+    end
     self
   end
 
