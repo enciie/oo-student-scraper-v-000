@@ -21,8 +21,19 @@ class Student
     students_array.each {|student_hash| Student.new(student_hash)}
   end
 
-  def add_student_attributes(attributes_hash)
+  #This instance method should take in a hash whose key/value pairs describe
+  #additional attributes of an individual student.
+  #In fact, we will be calling student.add_student_attributes with the return value
+  #of the Scraper.scrape_profile_page method as the argument.
+  #The #add_student_attributes method should iterate over the given hash and
+  #use metaprogramming to dynamically assign the student attributes and values
+  #in accordance with the key/value pairs of the hash. Use the #send method to achieve this.
+  #The return value of this method should be the student itself. Use the self keyword.
 
+  def add_student_attributes(attributes_hash)
+    attributes_hash.each {|attribute, value|
+    self.send ("#{attribute}=", value)}
+    self
   end
 
   def self.all
