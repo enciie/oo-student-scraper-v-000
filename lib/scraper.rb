@@ -32,7 +32,7 @@ class Scraper
     student = {}
 
     links = profile_page.css(".social-icon-container")
-    end
+    
     binding.pry
   end
 
