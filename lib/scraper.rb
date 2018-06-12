@@ -37,11 +37,11 @@ class Scraper
     student[:linkedin] = profile_page.css(".social-icon-container").children.css("a")[1].attribute("href").value
     if profile_page.css(".social-icon-container").children.css("a")[1]
     student[:github] = profile_page.css(".social-icon-container").children.css("a")[2].attribute("href").value
-    profile_page.css(".social-icon-container").children.css("a")[2]
+    if profile_page.css(".social-icon-container").children.css("a")[2]
     student[:blog] = profile_page.css(".social-icon-container").children.css("a")[3].attribute("href").value
-    profile_page.css(".social-icon-container").children.css("a")[3]
+    if profile_page.css(".social-icon-container").children.css("a")[3]
 
-    
+
   end
 
 end
