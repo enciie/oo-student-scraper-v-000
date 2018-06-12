@@ -40,6 +40,7 @@ class Scraper
     if profile_page.css(".social-icon-container").children.css("a")[2]
     student[:blog] = profile_page.css(".social-icon-container").children.css("a")[3].attribute("href").value
     if profile_page.css(".social-icon-container").children.css("a")[3]
+    end
 
 
   end
